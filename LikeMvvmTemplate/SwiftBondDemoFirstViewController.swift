@@ -19,7 +19,7 @@ class SwiftBondDemoFirstViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
-    let viewModel = LoginViewModel()
+    private let viewModel = LoginViewModel()
     
     override func viewDidLoad() {
         
@@ -48,13 +48,13 @@ class SwiftBondDemoFirstViewController: UIViewController {
     }
 }
 
-enum LoginState {
+private enum LoginState {
     case None
     case InProgress
     case LoggedIn
 }
 
-class LoginViewModel {
+private class LoginViewModel {
     let username = Observable<String?>("Steve")
     let password = Observable<String?>("")
     
