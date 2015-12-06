@@ -27,12 +27,22 @@
                                     <segue destination="8Ud-Vg-mSA" kind="show" id="bqQ-Gc-duV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NsR-xk-m8T">
+                                <rect key="frame" x="71" y="124" width="58" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ReactKit"/>
+                                <connections>
+                                    <segue destination="nNN-ar-MMZ" kind="show" id="ryU-or-eWo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="NsR-xk-m8T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3EL-CG-GPH"/>
                             <constraint firstItem="YJK-eL-yKe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ApP-Ga-ZUk"/>
                             <constraint firstItem="YJK-eL-yKe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Y2x-be-3KN"/>
+                            <constraint firstItem="NsR-xk-m8T" firstAttribute="top" secondItem="YJK-eL-yKe" secondAttribute="bottom" constant="10" id="vaJ-HN-2V6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gy4-pV-I8b"/>
@@ -193,6 +203,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTG-mL-3Hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1368" y="153"/>
+        </scene>
+        <!--React Kit Demo First View Controller-->
+        <scene sceneID="pvQ-QO-UKw">
+            <objects>
+                <viewController id="nNN-ar-MMZ" customClass="ReactKitDemoFirstViewController" customModule="LikeMvvmTemplate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XgA-q8-hiy"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ti-fa-Vdz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smc-0c-cBO">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zZA-lg-uCh">
+                                <rect key="frame" x="20" y="74" width="60" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yed-43-8Na">
+                                <rect key="frame" x="20" y="114" width="60" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFI-3U-eFU">
+                                <rect key="frame" x="31" y="154" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="OhY-DG-Afl">
+                                <rect key="frame" x="32" y="194" width="37" height="37"/>
+                                <animations/>
+                                <color key="color" red="0.71882521210000005" green="0.86269092479999998" blue="0.92136205810000005" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OhY-DG-Afl" firstAttribute="top" secondItem="fFI-3U-eFU" secondAttribute="bottom" constant="10" id="2SQ-Wq-4Km"/>
+                            <constraint firstItem="OhY-DG-Afl" firstAttribute="centerX" secondItem="fFI-3U-eFU" secondAttribute="centerX" id="9mT-3Y-xNo"/>
+                            <constraint firstItem="fFI-3U-eFU" firstAttribute="top" secondItem="Yed-43-8Na" secondAttribute="bottom" constant="10" id="FdI-Bu-uma"/>
+                            <constraint firstAttribute="centerX" secondItem="fFI-3U-eFU" secondAttribute="centerX" id="TOD-ch-Sow"/>
+                            <constraint firstAttribute="centerX" secondItem="Yed-43-8Na" secondAttribute="centerX" id="TPu-H4-8Re"/>
+                            <constraint firstAttribute="trailing" secondItem="Yed-43-8Na" secondAttribute="trailing" constant="20" id="aeV-16-Ovf"/>
+                            <constraint firstItem="Yed-43-8Na" firstAttribute="top" secondItem="zZA-lg-uCh" secondAttribute="bottom" constant="10" id="cd1-FV-gKk"/>
+                            <constraint firstItem="Yed-43-8Na" firstAttribute="leading" secondItem="smc-0c-cBO" secondAttribute="leading" constant="20" id="jY9-Sp-pd2"/>
+                            <constraint firstAttribute="trailing" secondItem="zZA-lg-uCh" secondAttribute="trailing" constant="20" id="jhI-nj-zvh"/>
+                            <constraint firstItem="zZA-lg-uCh" firstAttribute="leading" secondItem="smc-0c-cBO" secondAttribute="leading" constant="20" id="uqu-Ne-PYB"/>
+                            <constraint firstItem="zZA-lg-uCh" firstAttribute="top" secondItem="XgA-q8-hiy" secondAttribute="bottom" constant="10" id="wf3-LK-we9"/>
+                            <constraint firstAttribute="centerX" secondItem="zZA-lg-uCh" secondAttribute="centerX" id="xnZ-tM-O4P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lkj-8m-16s"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="100" height="250"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="OhY-DG-Afl" id="BRm-YR-nTb"/>
+                        <outlet property="loginButton" destination="fFI-3U-eFU" id="zwJ-nL-RdW"/>
+                        <outlet property="passwordTextField" destination="Yed-43-8Na" id="CUj-tg-K3d"/>
+                        <outlet property="usernameTextField" destination="zZA-lg-uCh" id="W67-dJ-6Po"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ccv-dK-MeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1368" y="513"/>
         </scene>
     </scenes>
 </document>
