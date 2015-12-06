@@ -12,7 +12,26 @@
 		602E7E541C13E0D40012C0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602E7E521C13E0D40012C0DA /* Main.storyboard */; };
 		602E7E561C13E0D40012C0DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602E7E551C13E0D40012C0DA /* Assets.xcassets */; };
 		602E7E591C13E0D40012C0DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602E7E571C13E0D40012C0DA /* LaunchScreen.storyboard */; };
+		60C3B42E1C13FD140024C5AF /* Bond.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4241C13FD130024C5AF /* Bond.framework */; };
+		60C3B42F1C13FD140024C5AF /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4241C13FD130024C5AF /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60C3B4341C13FD150024C5AF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */; };
+		60C3B4351C13FD150024C5AF /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		60C3B43A1C13FD170024C5AF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				60C3B42F1C13FD140024C5AF /* Bond.framework in Embed Frameworks */,
+				60C3B4351C13FD150024C5AF /* SwiftyJSON.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		602E7E4B1C13E0D40012C0DA /* LikeMvvmTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LikeMvvmTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,6 +41,14 @@
 		602E7E551C13E0D40012C0DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		602E7E581C13E0D40012C0DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602E7E5A1C13E0D40012C0DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60C3B4221C13FD130024C5AF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Frameworks/Result/1.0.0/Result.framework; sourceTree = "<group>"; };
+		60C3B4231C13FD130024C5AF /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../Frameworks/ReactiveCocoa/v4.0.0-alpha.4/ReactiveCocoa.framework"; sourceTree = "<group>"; };
+		60C3B4241C13FD130024C5AF /* Bond.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bond.framework; path = ../Frameworks/SwiftBond/v4.3.0/Bond.framework; sourceTree = "<group>"; };
+		60C3B4251C13FD130024C5AF /* SwiftState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftState.framework; path = ../Frameworks/SwiftState/3.0.1/SwiftState.framework; sourceTree = "<group>"; };
+		60C3B4261C13FD130024C5AF /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = ../Frameworks/SwiftTask/4.0.0/SwiftTask.framework; sourceTree = "<group>"; };
+		60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Frameworks/SwiftyJSON/2.3.3/SwiftyJSON.framework; sourceTree = "<group>"; };
+		60C3B4281C13FD130024C5AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Frameworks/Alamofire/3.1.3/Alamofire.framework; sourceTree = "<group>"; };
+		60C3B4291C13FD130024C5AF /* ReactKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactKit.framework; path = ../Frameworks/ReactKit/0.12.0/ReactKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C3B42E1C13FD140024C5AF /* Bond.framework in Frameworks */,
+				60C3B4341C13FD150024C5AF /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +69,7 @@
 			children = (
 				602E7E4D1C13E0D40012C0DA /* LikeMvvmTemplate */,
 				602E7E4C1C13E0D40012C0DA /* Products */,
+				60C3B43B1C13FD320024C5AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +94,22 @@
 			path = LikeMvvmTemplate;
 			sourceTree = "<group>";
 		};
+		60C3B43B1C13FD320024C5AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60C3B4221C13FD130024C5AF /* Result.framework */,
+				60C3B4231C13FD130024C5AF /* ReactiveCocoa.framework */,
+				60C3B4241C13FD130024C5AF /* Bond.framework */,
+				60C3B4251C13FD130024C5AF /* SwiftState.framework */,
+				60C3B4261C13FD130024C5AF /* SwiftTask.framework */,
+				60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */,
+				60C3B4281C13FD130024C5AF /* Alamofire.framework */,
+				60C3B4291C13FD130024C5AF /* ReactKit.framework */,
+			);
+			name = Frameworks;
+			path = LikeMvvmTemplate;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +120,7 @@
 				602E7E471C13E0D40012C0DA /* Sources */,
 				602E7E481C13E0D40012C0DA /* Frameworks */,
 				602E7E491C13E0D40012C0DA /* Resources */,
+				60C3B43A1C13FD170024C5AF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +294,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Result/1.0.0",
+					"$(PROJECT_DIR)/Frameworks/ReactiveCocoa/v4.0.0-alpha.4",
+					"$(PROJECT_DIR)/Frameworks/SwiftBond/v4.3.0",
+					"$(PROJECT_DIR)/Frameworks/SwiftState/3.0.1",
+					"$(PROJECT_DIR)/Frameworks/SwiftTask/4.0.0",
+					"$(PROJECT_DIR)/Frameworks/SwiftyJSON/2.3.3",
+					"$(PROJECT_DIR)/Frameworks/Alamofire/3.1.3",
+					"$(PROJECT_DIR)/Frameworks/ReactKit/0.12.0",
+				);
 				INFOPLIST_FILE = LikeMvvmTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ysmdsty.LikeMvvmTemplate;
@@ -258,6 +316,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/Result/1.0.0",
+					"$(PROJECT_DIR)/Frameworks/ReactiveCocoa/v4.0.0-alpha.4",
+					"$(PROJECT_DIR)/Frameworks/SwiftBond/v4.3.0",
+					"$(PROJECT_DIR)/Frameworks/SwiftState/3.0.1",
+					"$(PROJECT_DIR)/Frameworks/SwiftTask/4.0.0",
+					"$(PROJECT_DIR)/Frameworks/SwiftyJSON/2.3.3",
+					"$(PROJECT_DIR)/Frameworks/Alamofire/3.1.3",
+					"$(PROJECT_DIR)/Frameworks/ReactKit/0.12.0",
+				);
 				INFOPLIST_FILE = LikeMvvmTemplate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.ysmdsty.LikeMvvmTemplate;
@@ -284,6 +353,7 @@
 				602E7E5F1C13E0D40012C0DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
