@@ -16,6 +16,9 @@
 		60C3B42F1C13FD140024C5AF /* Bond.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4241C13FD130024C5AF /* Bond.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60C3B4341C13FD150024C5AF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */; };
 		60C3B4351C13FD150024C5AF /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60C3B43D1C1418B50024C5AF /* SwiftBondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B43C1C1418B50024C5AF /* SwiftBondViewController.swift */; };
+		60C3B4451C1428610024C5AF /* SwiftBondDemoFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B4441C1428610024C5AF /* SwiftBondDemoFirstViewController.swift */; };
+		60C3B4471C1428760024C5AF /* SwiftBondDemoSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3B4461C1428760024C5AF /* SwiftBondDemoSecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +52,9 @@
 		60C3B4271C13FD130024C5AF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../Frameworks/SwiftyJSON/2.3.3/SwiftyJSON.framework; sourceTree = "<group>"; };
 		60C3B4281C13FD130024C5AF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Frameworks/Alamofire/3.1.3/Alamofire.framework; sourceTree = "<group>"; };
 		60C3B4291C13FD130024C5AF /* ReactKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactKit.framework; path = ../Frameworks/ReactKit/0.12.0/ReactKit.framework; sourceTree = "<group>"; };
+		60C3B43C1C1418B50024C5AF /* SwiftBondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBondViewController.swift; sourceTree = "<group>"; };
+		60C3B4441C1428610024C5AF /* SwiftBondDemoFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBondDemoFirstViewController.swift; sourceTree = "<group>"; };
+		60C3B4461C1428760024C5AF /* SwiftBondDemoSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftBondDemoSecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,12 +90,14 @@
 		602E7E4D1C13E0D40012C0DA /* LikeMvvmTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				60C3B4431C1428100024C5AF /* SwiftBondDemo */,
 				602E7E4E1C13E0D40012C0DA /* AppDelegate.swift */,
 				602E7E501C13E0D40012C0DA /* ViewController.swift */,
 				602E7E521C13E0D40012C0DA /* Main.storyboard */,
 				602E7E551C13E0D40012C0DA /* Assets.xcassets */,
 				602E7E571C13E0D40012C0DA /* LaunchScreen.storyboard */,
 				602E7E5A1C13E0D40012C0DA /* Info.plist */,
+				60C3B43C1C1418B50024C5AF /* SwiftBondViewController.swift */,
 			);
 			path = LikeMvvmTemplate;
 			sourceTree = "<group>";
@@ -108,6 +116,15 @@
 			);
 			name = Frameworks;
 			path = LikeMvvmTemplate;
+			sourceTree = "<group>";
+		};
+		60C3B4431C1428100024C5AF /* SwiftBondDemo */ = {
+			isa = PBXGroup;
+			children = (
+				60C3B4441C1428610024C5AF /* SwiftBondDemoFirstViewController.swift */,
+				60C3B4461C1428760024C5AF /* SwiftBondDemoSecondViewController.swift */,
+			);
+			name = SwiftBondDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,8 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60C3B43D1C1418B50024C5AF /* SwiftBondViewController.swift in Sources */,
 				602E7E511C13E0D40012C0DA /* ViewController.swift in Sources */,
+				60C3B4451C1428610024C5AF /* SwiftBondDemoFirstViewController.swift in Sources */,
 				602E7E4F1C13E0D40012C0DA /* AppDelegate.swift in Sources */,
+				60C3B4471C1428760024C5AF /* SwiftBondDemoSecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
