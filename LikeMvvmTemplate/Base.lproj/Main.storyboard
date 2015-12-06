@@ -35,13 +35,20 @@
                                     <segue destination="nNN-ar-MMZ" kind="show" id="ryU-or-eWo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBm-bI-dP3">
+                                <rect key="frame" x="77" y="164" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="ReactiveCocoa"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NsR-xk-m8T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3EL-CG-GPH"/>
                             <constraint firstItem="YJK-eL-yKe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ApP-Ga-ZUk"/>
+                            <constraint firstItem="UBm-bI-dP3" firstAttribute="top" secondItem="NsR-xk-m8T" secondAttribute="bottom" constant="10" id="PIu-4V-qUz"/>
                             <constraint firstItem="YJK-eL-yKe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Y2x-be-3KN"/>
+                            <constraint firstItem="UBm-bI-dP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aGc-aq-O2k"/>
                             <constraint firstItem="NsR-xk-m8T" firstAttribute="top" secondItem="YJK-eL-yKe" secondAttribute="bottom" constant="10" id="vaJ-HN-2V6"/>
                         </constraints>
                     </view>
@@ -133,7 +140,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9c-hs-eDF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="153"/>
+            <point key="canvasLocation" x="1622" y="46"/>
         </scene>
         <!--Swift Bond Demo First View Controller-->
         <scene sceneID="YDM-im-hcS">
@@ -202,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTG-mL-3Hr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="153"/>
+            <point key="canvasLocation" x="1368" y="46"/>
         </scene>
         <!--React Kit Demo First View Controller-->
         <scene sceneID="pvQ-QO-UKw">
@@ -270,7 +277,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ccv-dK-MeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1368" y="513"/>
+            <point key="canvasLocation" x="1368" y="400"/>
         </scene>
     </scenes>
 </document>
