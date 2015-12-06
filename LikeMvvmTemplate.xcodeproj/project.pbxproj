@@ -24,6 +24,10 @@
 		60CE7A721C14578000A054B1 /* SwiftTask.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A6F1C14578000A054B1 /* SwiftTask.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60CE7A731C14578000A054B1 /* ReactKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A701C14578000A054B1 /* ReactKit.framework */; };
 		60CE7A741C14578000A054B1 /* ReactKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A701C14578000A054B1 /* ReactKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60CE7A771C147A0000A054B1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A751C147A0000A054B1 /* Result.framework */; };
+		60CE7A781C147A0000A054B1 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A751C147A0000A054B1 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		60CE7A791C147A0000A054B1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A761C147A0000A054B1 /* ReactiveCocoa.framework */; };
+		60CE7A7A1C147A0000A054B1 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A761C147A0000A054B1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,7 +38,9 @@
 			dstSubfolderSpec = 10;
 			files = (
 				60CE7A721C14578000A054B1 /* SwiftTask.framework in Embed Frameworks */,
+				60CE7A7A1C147A0000A054B1 /* ReactiveCocoa.framework in Embed Frameworks */,
 				60CE7A741C14578000A054B1 /* ReactKit.framework in Embed Frameworks */,
+				60CE7A781C147A0000A054B1 /* Result.framework in Embed Frameworks */,
 				60C3B42F1C13FD140024C5AF /* Bond.framework in Embed Frameworks */,
 				60C3B4351C13FD150024C5AF /* SwiftyJSON.framework in Embed Frameworks */,
 			);
@@ -59,6 +65,8 @@
 		60CE7A681C144E9400A054B1 /* ReactKitDemoFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactKitDemoFirstViewController.swift; sourceTree = "<group>"; };
 		60CE7A6F1C14578000A054B1 /* SwiftTask.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftTask.framework; path = ../Frameworks/SwiftTask/4.0.0/SwiftTask.framework; sourceTree = "<group>"; };
 		60CE7A701C14578000A054B1 /* ReactKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactKit.framework; path = ../Frameworks/ReactKit/0.12.0/ReactKit.framework; sourceTree = "<group>"; };
+		60CE7A751C147A0000A054B1 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = ../Frameworks/Result/1.0.0/Result.framework; sourceTree = "<group>"; };
+		60CE7A761C147A0000A054B1 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "../Frameworks/ReactiveCocoa/v4.0.0-alpha.4/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				60CE7A711C14578000A054B1 /* SwiftTask.framework in Frameworks */,
+				60CE7A791C147A0000A054B1 /* ReactiveCocoa.framework in Frameworks */,
 				60CE7A731C14578000A054B1 /* ReactKit.framework in Frameworks */,
+				60CE7A771C147A0000A054B1 /* Result.framework in Frameworks */,
 				60C3B42E1C13FD140024C5AF /* Bond.framework in Frameworks */,
 				60C3B4341C13FD150024C5AF /* SwiftyJSON.framework in Frameworks */,
 			);
@@ -96,6 +106,7 @@
 		602E7E4D1C13E0D40012C0DA /* LikeMvvmTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				60CE7A7B1C147E5200A054B1 /* ReactiveCocoa */,
 				60CE7A671C144E2700A054B1 /* ReactKit */,
 				60C3B4431C1428100024C5AF /* SwiftBondDemo */,
 				602E7E4E1C13E0D40012C0DA /* AppDelegate.swift */,
@@ -112,6 +123,8 @@
 		60C3B43B1C13FD320024C5AF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60CE7A751C147A0000A054B1 /* Result.framework */,
+				60CE7A761C147A0000A054B1 /* ReactiveCocoa.framework */,
 				60CE7A6F1C14578000A054B1 /* SwiftTask.framework */,
 				60CE7A701C14578000A054B1 /* ReactKit.framework */,
 				60C3B4241C13FD130024C5AF /* Bond.framework */,
