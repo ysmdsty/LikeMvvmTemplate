@@ -1,0 +1,19 @@
+### network
+github "https://github.com/Alamofire/Alamofire.git" "3.1.3"
+
+### Reactive Cocoa
+github "https://github.com/ReactiveCocoa/ReactiveCocoa.git" "v4.0.0-alpha.4"
+
+### ReactKit
+github "https://github.com/ReactKit/ReactKit" "0.12.0"
+github "https://github.com/ReactKit/SwiftTask.git" "4.0.0"
+github "https://github.com/ReactKit/SwiftState.git" "3.0.1"
+
+### SwiftBond
+github "https://github.com/SwiftBond/Bond.git" "v4.3.0"
+
+### SwiftyJson
+github "https://github.com/SwiftyJSON/SwiftyJSON.git" "2.3.3"
+
+github "ReactiveX/RxSwift" "2.0.0-beta.4"
+

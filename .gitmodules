@@ -1,0 +1,15 @@
+[submodule "ReliableDemos/ColinEberhardt/ReactiveTwitterSearch"]
+	path = ReliableDemos/ColinEberhardt/ReactiveTwitterSearch
+	url = https://github.com/ColinEberhardt/ReactiveTwitterSearch.git
+[submodule "ReliableDemos/SwiftBond/Bond-Demo-App"]
+	path = ReliableDemos/SwiftBond/Bond-Demo-App
+	url = https://github.com/SwiftBond/Bond-Demo-App.git
+[submodule "ReliableDemos/ReactKit/ReactKitCatalog"]
+	path = ReliableDemos/ReactKit/ReactKitCatalog
+	url = https://github.com/ReactKit/ReactKitCatalog.git
+[submodule "ReliableDemos/ReactiveCocoa/ReactiveCocoa"]
+	path = ReliableDemos/ReactiveCocoa/ReactiveCocoa
+	url = https://github.com/ReactiveCocoa/ReactiveCocoa.git
+[submodule "ReliableDemos/ReactiveX/RxSwift"]
+	path = ReliableDemos/ReactiveX/RxSwift
+	url = https://github.com/ReactiveX/RxSwift.git
