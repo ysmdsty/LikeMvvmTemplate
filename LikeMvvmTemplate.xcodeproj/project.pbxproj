@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60113F161C171445008DA956 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60113F151C171445008DA956 /* ReactiveCocoa.framework */; };
+		60113F171C171445008DA956 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60113F151C171445008DA956 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		602E7E4F1C13E0D40012C0DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602E7E4E1C13E0D40012C0DA /* AppDelegate.swift */; };
 		602E7E511C13E0D40012C0DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602E7E501C13E0D40012C0DA /* ViewController.swift */; };
 		602E7E541C13E0D40012C0DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602E7E521C13E0D40012C0DA /* Main.storyboard */; };
@@ -25,8 +27,6 @@
 		60CE7A741C14578000A054B1 /* ReactKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A701C14578000A054B1 /* ReactKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60CE7A771C147A0000A054B1 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A751C147A0000A054B1 /* Result.framework */; };
 		60CE7A781C147A0000A054B1 /* Result.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A751C147A0000A054B1 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		60CE7A791C147A0000A054B1 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A761C147A0000A054B1 /* ReactiveCocoa.framework */; };
-		60CE7A7A1C147A0000A054B1 /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A761C147A0000A054B1 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60CE7A811C15DAC700A054B1 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A7E1C15DAC700A054B1 /* RxBlocking.framework */; };
 		60CE7A821C15DAC700A054B1 /* RxBlocking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A7E1C15DAC700A054B1 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		60CE7A831C15DAC700A054B1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60CE7A7F1C15DAC700A054B1 /* RxCocoa.framework */; };
@@ -47,11 +47,11 @@
 				60CE7A821C15DAC700A054B1 /* RxBlocking.framework in Embed Frameworks */,
 				60CE7A721C14578000A054B1 /* SwiftTask.framework in Embed Frameworks */,
 				60CE7A861C15DAC700A054B1 /* RxSwift.framework in Embed Frameworks */,
-				60CE7A7A1C147A0000A054B1 /* ReactiveCocoa.framework in Embed Frameworks */,
 				60CE7A741C14578000A054B1 /* ReactKit.framework in Embed Frameworks */,
 				60CE7A841C15DAC700A054B1 /* RxCocoa.framework in Embed Frameworks */,
 				60CE7A781C147A0000A054B1 /* Result.framework in Embed Frameworks */,
 				60C3B42F1C13FD140024C5AF /* Bond.framework in Embed Frameworks */,
+				60113F171C171445008DA956 /* ReactiveCocoa.framework in Embed Frameworks */,
 				60C3B4351C13FD150024C5AF /* SwiftyJSON.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -60,6 +60,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		60113F151C171445008DA956 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = "Frameworks/ReactiveCocoa/v4.0.0-alpha.4/ReactiveCocoa.framework"; sourceTree = "<group>"; };
 		602E7E4B1C13E0D40012C0DA /* LikeMvvmTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LikeMvvmTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		602E7E4E1C13E0D40012C0DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		602E7E501C13E0D40012C0DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,11 +92,11 @@
 				60CE7A811C15DAC700A054B1 /* RxBlocking.framework in Frameworks */,
 				60CE7A711C14578000A054B1 /* SwiftTask.framework in Frameworks */,
 				60CE7A851C15DAC700A054B1 /* RxSwift.framework in Frameworks */,
-				60CE7A791C147A0000A054B1 /* ReactiveCocoa.framework in Frameworks */,
 				60CE7A731C14578000A054B1 /* ReactKit.framework in Frameworks */,
 				60CE7A831C15DAC700A054B1 /* RxCocoa.framework in Frameworks */,
 				60CE7A771C147A0000A054B1 /* Result.framework in Frameworks */,
 				60C3B42E1C13FD140024C5AF /* Bond.framework in Frameworks */,
+				60113F161C171445008DA956 /* ReactiveCocoa.framework in Frameworks */,
 				60C3B4341C13FD150024C5AF /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +107,7 @@
 		602E7E421C13E0D40012C0DA = {
 			isa = PBXGroup;
 			children = (
+				60113F151C171445008DA956 /* ReactiveCocoa.framework */,
 				60CE7A7E1C15DAC700A054B1 /* RxBlocking.framework */,
 				60CE7A7F1C15DAC700A054B1 /* RxCocoa.framework */,
 				60CE7A801C15DAC700A054B1 /* RxSwift.framework */,
