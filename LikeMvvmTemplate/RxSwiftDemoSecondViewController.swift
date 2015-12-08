@@ -1,10 +1,13 @@
 import UIKit
-import Bond
+import RxSwift
+import RxCocoa
 import SwiftyJSON
 
-class SwiftBondDemoSecondViewController: UITableViewController {
+class RxSwiftDemoSecondViewController: UITableViewController {
     private var listViewModel: ListViewModel = ListViewModel()
-    private var dataSource: ObservableArray<ObservableArray<ListCellViewModel>>! // Sections<Rows<ListCellViewModel>>
+    private var dataSource: [Variable<[ListCellViewModel]>]!
+
+    var disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -12,16 +15,28 @@ class SwiftBondDemoSecondViewController: UITableViewController {
         let refreshControl = UIRefreshControl()
         self.tableView.addSubview(refreshControl)
         refreshControl.addTarget(self, action: Selector("loadNextSet:"), forControlEvents: UIControlEvents.ValueChanged)
-        
-        dataSource = ObservableArray([listViewModel.repositoryCellViewModels])
-        dataSource.bindTo(tableView) { (indexPath, dataSource, tableView) -> UITableViewCell in
-            let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! SwiftBondDemoSecondCell
-            let viewModel = dataSource[indexPath.section][indexPath.row]
-            viewModel.name.bindTo(cell.nameLabel.bnd_text).disposeIn(cell.bnd_bag)
-            viewModel.photo.bindTo(cell.avatarImageView.bnd_image).disposeIn(cell.bnd_bag)
-            viewModel.fetchPhotoIfNeeded()
-            return cell
+        dataSource = [listViewModel.repositoryCellViewModels]
+        listViewModel.dataSetChaged = AnyObserver{[unowned self] _ in
+            self.tableView.reloadData()
         }
+        
+        tableView.dataSource = self
+    }
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return dataSource.count
+    }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataSource[section].value.count
+    }
+
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! RxSwiftDemoSecondCell
+        let viewModel = dataSource[indexPath.section].value[indexPath.row]
+        viewModel.name.bindTo(cell.nameLabel.rx_text).addDisposableTo(cell.disposeBag)
+        viewModel.photo.bindTo(cell.avatarImageView.rx_image).addDisposableTo(cell.disposeBag)
+        viewModel.fetchPhotoIfNeeded()
+        return cell
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,21 +48,26 @@ class SwiftBondDemoSecondViewController: UITableViewController {
     }
 }
 
-class SwiftBondDemoSecondCell: UITableViewCell {
+class RxSwiftDemoSecondCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
+    
+    var disposeBag = DisposeBag()
+    
     override func prepareForReuse() {
         super.prepareForReuse()
         avatarImageView.image = nil
-        bnd_bag.dispose()
+        
+        disposeBag = DisposeBag()
     }
 }
 
 private class ListViewModel {
-    let repositoryCellViewModels: ObservableArray<ListCellViewModel> = ObservableArray([])
+    var repositoryCellViewModels: Variable<[ListCellViewModel]> = Variable([])
+    var dataSetChaged: AnyObserver<Bool>!
     private var apiURL: NSURL! {return NSURL(string: "https://api.github.com/repositories" + "?since=\(since)")}
     private var since = 0
-    
+
     func fetchNextPageOfRepositories(completion: () -> Void) {
         Mock.dispatchAsyncGlobal {
             guard let data = NSData(contentsOfURL: self.apiURL) else {return}
@@ -63,7 +83,8 @@ private class ListViewModel {
                     self.since = max(self.since, id)
                     newRepos.append(ListCellViewModel(name: name, username: username, photoUrl: photoURL))
                 }
-                self.repositoryCellViewModels.insertContentsOf(newRepos.reverse(), atIndex: 0)
+                self.repositoryCellViewModels.value.insertContentsOf(newRepos.reverse(), at: 0)
+                self.dataSetChaged.onNext(true)
                 completion()
             })
         }
@@ -71,16 +92,16 @@ private class ListViewModel {
 }
 
 private class ListCellViewModel {
-    let name: Observable<String>
-    let photo: Observable<UIImage?>
+    let name: Variable<String>
+    let photo: Variable<UIImage?>
     let photoUrl: String?
-    
+
     init(name: String, username: String, photoUrl: String?) {
-        self.name = Observable(name)
-        self.photo = Observable<UIImage?>(nil) // initially no photo
+        self.name = Variable(name)
+        self.photo = Variable(nil) // initially no photo
         self.photoUrl = photoUrl
     }
-    
+
     func fetchPhotoIfNeeded() {
         if self.photo.value != nil {return}
         guard let photoUrlStr = photoUrl else {return}
